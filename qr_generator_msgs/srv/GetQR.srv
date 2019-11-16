@@ -1,0 +1,5 @@
+string data
+---
+bool status
+string message
+sensor_msgs/Image image
