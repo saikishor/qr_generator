@@ -15,7 +15,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
-  <build_depend>libqrencode</build_depend>
+  <build_depend>libqrencode-dev</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>cv_bridge</build_depend>
   <build_depend>qr_generator_msgs</build_depend>

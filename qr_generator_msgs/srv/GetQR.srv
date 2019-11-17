@@ -1,4 +1,13 @@
-string data
+# The level of error correction. Higher levels of error correction sacrifice data capacity, but allow a larger portion of the QR code to be damaged or unreadable.
+uint8 ECC_DEFAULT=0
+uint8 ECC_LOW=1
+uint8 ECC_MEDIUM=2
+uint8 ECC_QUARTILE=3
+uint8 ECC_HIGH=4
+
+string data # The data to be encoded into QR
+uint8 error_correction_type
+uint8 qr_version # qr_version should be set between 1-40. If parsed zero, uses the default one 
 ---
 bool status
 string message

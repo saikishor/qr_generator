@@ -1,0 +1,20 @@
+<!-- -->
+<launch>
+
+    <arg name="border_size" 	default="10" /> 
+    <arg name="qr_version" 		default="6" /> <!-- Should be between 1 and 40-->
+    <arg name="qr_size" 		default="220" /> <!-- Final size of the QR along with borders-->
+    <arg name="casesensitive" 	default="true" />
+    <arg name="error_type" 		default="MEDIUM" /> <!-- error type can be LOW, MEDIUM, QUARTILE, HIGH-->
+    <arg name="save_copy_to" 	default="$(env HOME)/.pal/qr_generator/qr.png" /> 
+
+    <node name="qr_generator_ros" pkg="qr_generator" type="qr_generator_node" output="screen">
+        <param name="border_size" 	type="int" 		value="$(arg border_size)" />
+        <param name="qr_version" 	type="int" 		value="$(arg qr_version)" />
+        <param name="qr_size" 		type="int" 		value="$(arg qr_size)" />
+        <param name="casesensitive" type="bool" 	value="$(arg casesensitive)" />
+        <param name="error_type" 	type="string" 	value="$(arg error_type)" />
+        <param name="save_to" 		type="string" 	value="$(arg save_copy_to)" />
+    </node>
+
+</launch>
