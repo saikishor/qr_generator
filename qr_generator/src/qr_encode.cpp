@@ -64,6 +64,7 @@ QRencodeMode QrEncoder::getQREncodeMode(const std::string &data) const
       return qr_mode;
     }
   }
+  return QR_MODE_8;
 }
 
 bool QrEncoder::encodeQR(qr_generator_msgs::GetQR::Request &req,
